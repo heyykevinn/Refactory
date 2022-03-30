@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+    const num = 123;
+    const num2 = 231;
+    const num3 = 321;
+    const num4 = -1;
+    const num5 = 0;
+    const num6 = 99;
+    const num7= 1000;
+
+    const maxRedigit = function(num) {
+        if(num < 100 || num > 999)
+        return null
+    
+        return +num
+        .toString()
+        .split('')
+        .sort((a, b) => b - a)
+        .join('')
+    };
+    document.writeln(`maxRedigit(123) -->` + maxRedigit(num) );
+    document.write("<br>");
+    document.writeln(`maxRedigit(231) -->` + maxRedigit(num2) );
+    document.write("<br>");
+    document.writeln(`maxRedigit(321) -->` + maxRedigit(num3) );
+    document.write("<br>");
+    document.write("<br>");
+    document.writeln(`maxRedigit(-1) -->` + maxRedigit(num4) );
+    document.write("<br>");
+    document.writeln(`maxRedigit(0) -->` + maxRedigit(num5) );
+    document.write("<br>");
+    document.writeln(`maxRedigit(99) -->` + maxRedigit(num6) );
+    document.write("<br>");
+    document.writeln(`maxRedigit(1000) -->` + maxRedigit(num7) );
+    </script>
+    
+</body>
+</html>
